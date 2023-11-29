@@ -1,31 +1,22 @@
-import javax.xml.namespace.QName;
+
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("podaj ciąg:");
+        System.out.println("Podaj slowo");
+        String str = scanner.nextLine();
 
-        String ciag = scanner.nextLine();
-        String ciag1 ="";
-        String ciag2 ="";
-        if(ciag.length() >=2) {
-            ciag1 = ciag.substring((ciag.length() / 2) - 1,(ciag.length() / 2) +1);
-            ciag2 = ciag1.concat(ciag.substring(0,(ciag.length() / 2) -1) +ciag.substring(ciag.length() / 2) +1);
+        if (str.length() <= 4) {
+            System.out.println("Nieprawidłowe słowo");
+        } else {
+            int length = str.length() / 2;
+            String str1 = str.substring(length, length+2);
+            String str2 = str.substring(0,length);
+            String str3 = str.substring(length+2, str.length());
 
-            System.out.println(ciag1);
-        }else{
-            System.out.println("za krótki ciąg");
+            System.out.println(str1+str2+str3);
         }
-
-
-
-
-
-
-
-
-
 
     }
 }
-
