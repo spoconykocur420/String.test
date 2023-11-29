@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner skaner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj slowo");
-        String str = skaner.nextLine();
+        String str = scanner.nextLine();
 
         if (str.length() <= 4) {
-            System.out.println("Błąd");
+            System.out.println("Nieprawidłowe słowo");
         } else {
             int length = str.length() / 2;
             String str1 = str.substring(length, length+2);
